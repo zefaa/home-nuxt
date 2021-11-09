@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class ="mb-8">
     <v-app-bar
       :clipped-left="clipped"
       app

@@ -32,11 +32,11 @@
     
       <v-col class="pa-md-2 mx-lg-auto mb-8">
         <v-card class=" white--text" color="rgb(255,250,250, 0.0)">
-          <p class="text-h7 justify-center">
+          <p class="text-h20 justify-center">
             ” Selamat bergabung di website resmi kami, Yayasan Yohannes Gabriel
             Perwakilan 1.
           </p>
-          <p class="justify-center">
+          <p class="text-h10 justify-center">
             &nbsp; &nbsp; Yayasan Yohannes Gabriel Perwakilan 1 Surabaya adalah
             yayasan pendidikan yang mengelola sekolah-sekolah Katolik di
             Keuskupan Surabaya. Sejak berdiri tahun 1925, yayasan ini ada dan
@@ -61,9 +61,9 @@
         <v-card class="pa-md-4 mx-lg-auto white--text" color="rgb(255,250,250, 0.0)">
           <center>
             <h1 justify-center>
-              <p class="text-h3">JADWAL KEGIATAN SEMINGGU</p>
+              JADWAL KEGIATAN SEMINGGU
             </h1>
-            <p class="text-h5 justify-center">SE-YAYASAN YOHANES GABRIEL</p>
+            <h2>SE-YAYASAN YOHANES GABRIEL</h2>
           </center>
         </v-card>
       </v-col>
@@ -110,7 +110,7 @@
         <v-card class="white--text" color="rgb(255,250,250, 0.0)">
           <center>
             <h1 justify-center>
-              <p class="text">TESTIMONI YOHANNES GABRIEL PERWAKILAN 1</p>
+              TESTIMONI YOHANNES GABRIEL PERWAKILAN 1
             </h1>
             <h2 justify-center><p class="text">SISWA, ORANGTUA, ALUMNI</p></h2>
           </center>

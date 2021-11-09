@@ -15,8 +15,8 @@
 
 <style scoped>
 .dash{
-  background: url(@/assets/images/cool-background.png);
-  background-size:contain, cover;
+  background: url(@/assets/images/bgImage.jpg);
+  background-size:cover;
   background-position:center;
   height: 100%;
   width: 100%;
