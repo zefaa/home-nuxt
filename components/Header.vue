@@ -3,27 +3,33 @@
     <v-app-bar
       :clipped-left="clipped"
       app
-      color="primary"
-      
+      color="#399cbd"
       :hide-on-scroll="scroll"
     >
-      <v-toolbar-title v-text="title" />
+      <v-app-bar-title class="white--text">Yayasan Yohannes Gabriel Perwakilan 1</v-app-bar-title>
       <v-spacer />
-      <v-btn icon href="https://www.instagram.com/tv/CGrH7K1jAt6/">
+      
+      <v-btn
+        icon
+        href="https://www.instagram.com/tv/CGrH7K1jAt6/"
+        color="white"
+      >
         <v-icon>mdi-instagram</v-icon>
       </v-btn>
-      <v-btn icon href="https://www.gmail.com">
+      <v-btn icon href="https://www.gmail.com" color="white">
         <v-icon>mdi-gmail</v-icon>
       </v-btn>
       <v-btn
         icon
         href="https://api.whatsapp.com/send?phone=62082132229796&text=Selamat%20pagi%2C%20saya%20ingin%20bertanya%20sesuatu%20apakah%20bisa%3F"
+        color="white"
       >
         <v-icon>mdi-whatsapp</v-icon>
       </v-btn>
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
+      <v-btn icon @click.stop="rightDrawer = !rightDrawer" color="white">
         <v-icon>mdi-information-outline</v-icon>
       </v-btn>
+      
     </v-app-bar>
     <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
       <v-list-item>
@@ -81,8 +87,6 @@ export default {
       clipped: false,
       drawer: false,
       scroll: true,
-      
-      
 
       miniVariant: false,
       right: true,

@@ -1,8 +1,9 @@
 <template>
-  <v-container class="pa-md-4 mx-lg-auto">
-    <v-row no-gutters>
+
+  <v-container class="pa-md-2 mx-lg-auto">
+    <v-row >
       <v-col>
-        <v-card class="pa-md-2 mx-lg-auto">
+        <v-card class="pa-md-2 mx-lg-auto mb-8 mt-15  white--text" color="rgb(255,250,250, 0.0)">
           <center>
             <h1 justify-center>
               MEWUJUDKAN PENDIDIKAN KATOLIK YANG MEMBENTUK PRIBADI BERINTEGRITAS
@@ -13,12 +14,12 @@
     </v-row>
 
     <v-row no-gutters>
-      <v-col class="pa-md-2 mx-lg-auto">
+      <v-col class="pa-md-2 mx-lg-auto mb-2">
         <center>
           <img src="@/assets/images/children.jpg" height="100" width="150"/>      
       
         </center>
-        <v-card class="pa-1" outlined tile>
+        <v-card class="pa-1 white--text" color="rgb(255,250,250, 0.0) ">
           <center><h4>RD.Aloysius Hans Koerniawan</h4></center>
           <center>
             <p class="justify-center">
@@ -27,8 +28,10 @@
           </center>
         </v-card>
       </v-col>
-      <v-col class="pa-md-2 mx-lg-auto">
-        <v-card>
+      </v-row>
+    
+      <v-col class="pa-md-2 mx-lg-auto mb-8">
+        <v-card class=" white--text" color="rgb(255,250,250, 0.0)">
           <p class="text-h7 justify-center">
             ” Selamat bergabung di website resmi kami, Yayasan Yohannes Gabriel
             Perwakilan 1.
@@ -51,11 +54,11 @@
           </p>
         </v-card>
       </v-col>
-    </v-row>
+    
 
     <v-row no-gutters>
-      <v-col class="pa-md-2 mx-lg-auto">
-        <v-card class="pa-md-4 mx-lg-auto">
+      <v-col class="pa-md-2 mx-lg-auto mt-8">
+        <v-card class="pa-md-4 mx-lg-auto white--text" color="rgb(255,250,250, 0.0)">
           <center>
             <h1 justify-center>
               <p class="text-h3">JADWAL KEGIATAN SEMINGGU</p>
@@ -67,8 +70,8 @@
     </v-row>
 
     <v-row no-gutters>
-      <v-col class="pa-md-2 mx-lg-auto">
-        <v-card class="pa-md-4 mx-lg-auto">
+      <v-col class="pa-md-2 mx-lg-auto mt-5">
+        <v-card class="pa-md-4 mx-lg-auto  white--text" color="rgb(255,250,250, 0.0)">
           <center>
             <h1 justify-center><p class="text">NOVEMBER</p></h1>
           </center>
@@ -103,8 +106,8 @@
     </v-flex>
 
     <v-row no-gutters>
-      <v-col class="pa-md-2 mx-lg-auto">
-        <v-card class="pa-md-4 mx-lg-auto">
+      <v-col class="pa-md-2 mx-lg-auto mt-10">
+        <v-card class="white--text" color="rgb(255,250,250, 0.0)">
           <center>
             <h1 justify-center>
               <p class="text">TESTIMONI YOHANNES GABRIEL PERWAKILAN 1</p>
@@ -116,7 +119,7 @@
     </v-row>
 
     <v-row no-gutters>
-      <v-col class="pa-md-2 mx-lg-auto">
+      <v-col class="pa-md-2 mx-lg-auto mt-8 mb-10">
         <v-carousel hide-delimiters>
             
           <v-carousel-item
@@ -128,51 +131,35 @@
       </v-col>
     </v-row>
   </v-container>
+
 </template>
 
 
 
 <script>
+
 export default {
+  
   layout: "halaman",
 
   data: () => ({
-    today: "2021-11-08",
+    
+    
+    
+   
+  
+    today: "2021-11-09",
     events: [
       {
-        title: "Vacation",
-        date: "2021-11-01",
-      },
-      {
-        title: "Vacation",
-        date: "2021-11-02",
-      },
-      {
-        title: "Vacation",
-        date: "2021-11-03",
-      },
-      {
-        title: "Meeting",
+        title: "Orasi Pemilihan Ketua OSIS SMAK Untung Suropati Sidoarjo",
         date: "2021-11-08",
       },
       {
-        title: "30th Birthday",
-        date: "2021-11-19",
-      },
-      {
-        title: "Vacation",
-        date: "2021-11-22",
-      },
-      {
-        title: "Conference",
+        title: "Hari Guru",
         date: "2021-11-25",
       },
-      {
-        title: "Hackathon",
-        date: "2021-11-28",
-      },
     ],
-    
+
     items: [
       {
         src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
@@ -187,7 +174,10 @@ export default {
         src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
       },
     ],
+     
   }),
+
+  
 
   computed: {
     // convert the list of events into a map of lists keyed by date
@@ -204,5 +194,16 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.dash{
+  background: url(@/assets/images/cool-background.png);
+  color:rgb(255,250,250, 0.8);
+  background-size:cover;
+  height: 100vh;
+  /*background-color: bisque;*/
+}
+</style>
+
 
 

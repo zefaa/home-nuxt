@@ -1,5 +1,5 @@
 <template>
-  <v-app light>
+  <v-app class="dash">
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -115,3 +115,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.dash{
+  background: url(@/assets/images/bgImage.jpg);
+  background-size:cover;
+  height: 100vh;
+  /*background-color: bisque;*/
+}
+</style>

@@ -2,21 +2,21 @@
   <v-footer dark padless>
     <v-card flat tile width="100%" class="primary white--text text-center">
       <v-card-text>
-          <v-btn icon href="https://www.instagram.com/tv/CGrH7K1jAt6/">
-            <v-icon>mdi-instagram</v-icon>
-          </v-btn>
+        <v-btn icon href="https://www.instagram.com/tv/CGrH7K1jAt6/">
+          <v-icon>mdi-instagram</v-icon>
+        </v-btn>
 
-          <v-btn icon href="https://www.gmail.com">
-            <v-icon>mdi-gmail</v-icon>
-          </v-btn>
+        <v-btn icon href="https://www.gmail.com">
+          <v-icon>mdi-gmail</v-icon>
+        </v-btn>
 
-          <v-btn
-            icon
-            href="https://api.whatsapp.com/send?phone=62082132229796&text=Selamat%20pagi%2C%20saya%20ingin%20bertanya%20sesuatu%20apakah%20bisa%3F"
-          >
-            <v-icon>mdi-whatsapp</v-icon>
-          </v-btn>
-        </v-card-text>
+        <v-btn
+          icon
+          href="https://api.whatsapp.com/send?phone=62082132229796&text=Selamat%20pagi%2C%20saya%20ingin%20bertanya%20sesuatu%20apakah%20bisa%3F"
+        >
+          <v-icon>mdi-whatsapp</v-icon>
+        </v-btn>
+      </v-card-text>
 
       <v-card-text class="pt-0 text-left text-md-center">
         <v-expansion-panels accordion v-model="panel" multiple>
@@ -30,7 +30,7 @@
               item.name
             }}</v-expansion-panel-header>
             <v-expansion-panel-content>
-              <li v-for="(tag,i) in item.tags" :key="i">
+              <li v-for="(tag, i) in item.tags" :key="i">
                 <a target="_blank" v-bind:href="tag.url" class="white--text"
                   >{{ tag.urlname }}
                 </a>
@@ -43,17 +43,16 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-          Copyright @ - {{ new Date().getFullYear() }} Yohannes Gabriel
-          Perwakilan 1 Surabaya, All Rights Reserved
-        </v-card-text>
+        Copyright @ - {{ new Date().getFullYear() }} Yohannes Gabriel Perwakilan
+        1 Surabaya, All Rights Reserved
+      </v-card-text>
     </v-card>
   </v-footer>
-
 </template>
 
 <script>
-export default{
-data: () => ({
+export default {
+  data: () => ({
     panel: [],
 
     items: [
@@ -105,9 +104,7 @@ data: () => ({
       },
       {
         name: "Penghitung Pengunjung",
-        tags: [
-          { urlname: "Help Center", url: "https://codepen.io/jettaz" }
-        ],
+        tags: [{ urlname: "Help Center", url: "https://codepen.io/jettaz" }],
       },
     ],
   }),
@@ -132,6 +129,5 @@ data: () => ({
     },
   },
 };
-
 </script>
 
