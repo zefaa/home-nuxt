@@ -54,8 +54,29 @@
 
       <v-col>
         <v-card class="pa-md-4 mx-lg-auto" color="rgb(255,250,250, 0.0)">
-          <v-card><center><h1>NOVEMBER</h1></center></v-card>
-          
+          <v-card
+            ><center><h1>NOVEMBER</h1></center></v-card>
+          <v-flex>
+            <v-card>
+              <v-calendar :now="today" :value="today" color="primary">
+                <template v-slot:day="{ date }">
+                  <template v-for="event in eventsMap[date]">
+                    <v-menu :key="event.title" v-model="event.open">
+                      <template v-slot:activator="{ on }">
+                        <div
+                          v-if="!event.time"
+                          v-ripple
+                          class="my-event"
+                          v-on="on"
+                          v-html="event.title"
+                        ></div>
+                      </template>
+                    </v-menu>
+                  </template>
+                </template>
+              </v-calendar>
+            </v-card>
+          </v-flex>
         </v-card>
       </v-col>
     </section>
