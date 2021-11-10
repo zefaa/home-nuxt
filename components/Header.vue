@@ -18,8 +18,8 @@
 
       <!--tampilan menu mobile-->
       <span class="hidden-md-and-up">
-        <v-btn @click.stop="drawer = !drawer" color="white">
-          <v-icon>mdi-menu</v-icon>
+        <v-btn icon @click.stop="drawer = !drawer" color="white">
+          <v-icon>mdi-dots-vertical-circle-outline</v-icon>
         </v-btn>
       </span>
 
