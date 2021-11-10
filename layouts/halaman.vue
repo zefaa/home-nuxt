@@ -1,29 +1,19 @@
 <template>
 
-  
-  <v-app class="dash">
- 
+
+  <v-app >
       <Header />
-     
-      <center><Nuxt/></center>
+     <content><Nuxt/></content>
+      
+        
         
       <Footer />
-    
+        
   </v-app>
  
 </template>
 
-<style scoped>
-.dash{
-  background: url(@/assets/images/bgImage.jpg);
-  background-size:cover;
-  background-position:center;
-  height: 100%;
-  width: 100%;
-  
-  /*background-color: bisque;*/
-}
-</style>
+
 
 
 

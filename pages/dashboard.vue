@@ -1,42 +1,32 @@
 <template>
+  <div>
+    <section class="dash1 mt-2 d-flex white--text">
+        <h1 class="mx-auto my-auto text-center">
+          MEWUJUDKAN PENDIDIKAN KATOLIK YANG MEMBENTUK PRIBADI BERINTEGRITAS
+        </h1>
+    </section>
 
-  <v-container class="pa-md-2 mx-lg-auto">
-    <v-row >
-      <v-col>
-        <v-card class="pa-md-2 mx-lg-auto mb-8 mt-15  white--text" color="rgb(255,250,250, 0.0)">
-          <center>
-            <h1 justify-center>
-              MEWUJUDKAN PENDIDIKAN KATOLIK YANG MEMBENTUK PRIBADI BERINTEGRITAS
-            </h1>
-          </center>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <v-row no-gutters>
-      <v-col class="pa-md-2 mx-lg-auto mb-2">
-        <center>
-          <img src="@/assets/images/children.jpg" height="100" width="150"/>      
+    <section class="dash2">
       
+        <center>
+          <img src="@/assets/images/children.jpg" height="100" width="150" />
         </center>
-        <v-card class="pa-1 white--text" color="rgb(255,250,250, 0.0) ">
-          <center><h4>RD.Aloysius Hans Koerniawan</h4></center>
-          <center>
-            <p class="justify-center">
-              Ketua Yayasan Yohannes Gabriel Perwakilan 1 Surabaya
-            </p>
-          </center>
-        </v-card>
-      </v-col>
-      </v-row>
-    
+
+        <center><h4>RD.Aloysius Hans Koerniawan</h4></center>
+        <center>
+          <p class="justify-center">
+            Ketua Yayasan Yohannes Gabriel Perwakilan 1 Surabaya
+          </p>
+        </center>
+     
+
       <v-col class="pa-md-2 mx-lg-auto mb-8">
-        <v-card class=" white--text" color="rgb(255,250,250, 0.0)">
-          <p class="text-h20 justify-center">
+        <center>
+          <p class="text-h20">
             ” Selamat bergabung di website resmi kami, Yayasan Yohannes Gabriel
             Perwakilan 1.
           </p>
-          <p class="text-h10 justify-center">
+          <p class="text-h10">
             &nbsp; &nbsp; Yayasan Yohannes Gabriel Perwakilan 1 Surabaya adalah
             yayasan pendidikan yang mengelola sekolah-sekolah Katolik di
             Keuskupan Surabaya. Sejak berdiri tahun 1925, yayasan ini ada dan
@@ -52,76 +42,55 @@
             mendidik dan membina anak-anak. Silahkan menghubungi kami untuk
             segala informasi yang dibutuhkan.”
           </p>
-        </v-card>
+        </center>
       </v-col>
-    
 
-    <v-row no-gutters>
-      <v-col class="pa-md-2 mx-lg-auto mt-8">
-        <v-card class="pa-md-4 mx-lg-auto white--text" color="rgb(255,250,250, 0.0)">
-          <center>
-            <h1 justify-center>
-              JADWAL KEGIATAN SEMINGGU
-            </h1>
-            <h2>SE-YAYASAN YOHANES GABRIEL</h2>
-          </center>
-        </v-card>
+      <v-col class="mt-2">
+        <center>
+          <h1 justify-center>JADWAL KEGIATAN SEMINGGU</h1>
+          <h2>SE-YAYASAN YOHANES GABRIEL</h2>
+        </center>
       </v-col>
-    </v-row>
 
-    <v-row no-gutters>
-      <v-col class="pa-md-2 mx-lg-auto mt-5">
-        <v-card class="pa-md-4 mx-lg-auto  white--text" color="rgb(255,250,250, 0.0)">
-          <center>
-            <h1 justify-center><p class="text">NOVEMBER</p></h1>
-          </center>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <v-flex class="pa-md-2 mx-lg-auto">
-      <v-card>
-        <v-calendar :now="today" :value="today" color="primary">
-          <template v-slot:day="{ date }">
-            <template v-for="event in eventsMap[date]">
-              <v-menu
-                :key="event.title"
-                v-model="event.open"
-                
-              >
-                <template v-slot:activator="{ on }">
-                  <div
-                    v-if="!event.time"
-                    v-ripple
-                    class="my-event"
-                    v-on="on"
-                    v-html="event.title"
-                  ></div>
+      <v-col>
+        <v-card class="pa-md-4 mx-lg-auto" color="rgb(255,250,250, 0.0)">
+          <v-card
+            ><center><h1>NOVEMBER</h1></center></v-card
+          >
+          <v-flex>
+            <v-card>
+              <v-calendar :now="today" :value="today" color="primary">
+                <template v-slot:day="{ date }">
+                  <template v-for="event in eventsMap[date]">
+                    <v-menu :key="event.title" v-model="event.open">
+                      <template v-slot:activator="{ on }">
+                        <div
+                          v-if="!event.time"
+                          v-ripple
+                          class="my-event"
+                          v-on="on"
+                          v-html="event.title"
+                        ></div>
+                      </template>
+                    </v-menu>
+                  </template>
                 </template>
-              </v-menu>
-            </template>
-          </template>
-        </v-calendar>
-      </v-card>
-    </v-flex>
-
-    <v-row no-gutters>
-      <v-col class="pa-md-2 mx-lg-auto mt-10">
-        <v-card class="white--text" color="rgb(255,250,250, 0.0)">
-          <center>
-            <h1 justify-center>
-              TESTIMONI YOHANNES GABRIEL PERWAKILAN 1
-            </h1>
-            <h2 justify-center><p class="text">SISWA, ORANGTUA, ALUMNI</p></h2>
-          </center>
+              </v-calendar>
+            </v-card>
+          </v-flex>
         </v-card>
       </v-col>
-    </v-row>
+    </section>
 
-    <v-row no-gutters>
-      <v-col class="pa-md-2 mx-lg-auto mt-8 mb-10">
+    <section>
+      <v-col>
+        <center>
+          <h1 justify-center>TESTIMONI YOHANNES GABRIEL PERWAKILAN 1</h1>
+          <h2 justify-center><p class="text">SISWA, ORANGTUA, ALUMNI</p></h2>
+        </center>
+      </v-col>
+      <v-col>
         <v-carousel hide-delimiters>
-            
           <v-carousel-item
             v-for="(item, i) in items"
             :key="i"
@@ -129,25 +98,17 @@
           ></v-carousel-item>
         </v-carousel>
       </v-col>
-    </v-row>
-  </v-container>
-
+    </section>
+  </div>
 </template>
 
 
 
 <script>
-
 export default {
-  
   layout: "halaman",
 
   data: () => ({
-    
-    
-    
-   
-  
     today: "2021-11-09",
     events: [
       {
@@ -174,10 +135,7 @@ export default {
         src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
       },
     ],
-     
   }),
-
-  
 
   computed: {
     // convert the list of events into a map of lists keyed by date
@@ -196,12 +154,27 @@ export default {
 </script>
 
 <style scoped>
-.dash{
-  background: url(@/assets/images/cool-background.png);
-  color:rgb(255,250,250, 0.8);
-  background-size:cover;
-  height: 100vh;
-  /*background-color: bisque;*/
+.dash1 {
+  background-size: cover !important;
+  width: 100%;
+  height: 600px;
+  background: url(@/assets/images/bash.jpeg);
+}
+
+.dash2 {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(248, 248, 248);
+}
+
+.dash3 {
+  background-size: cover !important;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background: url(@/assets/images/bash1.jpeg);
 }
 </style>
 

@@ -1,36 +1,49 @@
 <template>
-  <v-container class ="mb-8">
+  <v-container class="mb-8">
     <v-app-bar
       :clipped-left="clipped"
       app
       color="#399cbd"
       :hide-on-scroll="scroll"
     >
-      <v-app-bar-title class="white--text">Yayasan Yohannes Gabriel Perwakilan 1</v-app-bar-title>
+      <!--tampilan bar title mobile-->
+     <v-app-bar-title class="white--text hidden-md-and-up">YOGA</v-app-bar-title
+      >
+
+      <!--tampilan bar title desktop-->
+      <v-app-bar-title class="white--text hidden-sm-and-down"
+        >Yayasan Yohannes Gabriel Perwakilan 1</v-app-bar-title
+      >
       <v-spacer />
-      
-      <v-btn
-        icon
-        href="https://www.instagram.com/tv/CGrH7K1jAt6/"
-        color="white"
-      >
-        <v-icon>mdi-instagram</v-icon>
-      </v-btn>
-      <v-btn icon href="https://www.gmail.com" color="white">
-        <v-icon>mdi-gmail</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        href="https://api.whatsapp.com/send?phone=62082132229796&text=Selamat%20pagi%2C%20saya%20ingin%20bertanya%20sesuatu%20apakah%20bisa%3F"
-        color="white"
-      >
-        <v-icon>mdi-whatsapp</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer" color="white">
-        <v-icon>mdi-information-outline</v-icon>
-      </v-btn>
-      
+
+      <!--tampilan menu mobile-->
+      <span class="hidden-md-and-up">
+        <v-btn @click.stop="drawer = !drawer" color="white">
+          <v-icon>mdi-menu</v-icon>
+        </v-btn>
+      </span>
+
+      <!--tampilan menu desktop-->
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn to="insta" text color="white">
+          <v-icon>mdi-instagram</v-icon>
+        </v-btn>
+
+        <v-btn to="mail" text color="white">
+          <v-icon>mdi-gmail</v-icon>
+        </v-btn>
+
+        <v-btn to="wa" text color="white">
+          <v-icon>mdi-whatsapp</v-icon>
+        </v-btn>
+
+        <v-btn icon @click.stop="rightDrawer = !rightDrawer" color="white">
+          <v-icon>mdi-information-outline</v-icon>
+        </v-btn>
+      </v-toolbar-items>
     </v-app-bar>
+
+    <!--ini nav-bar buat informasi-->
     <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
       <v-list-item>
         <v-list-item-content>
@@ -77,6 +90,21 @@
         </v-list-item-content>
       </v-list-item>
     </v-navigation-drawer>
+
+    <!--ini navbar buat kontak-->
+    <v-navigation-drawer v-model="drawer" right fixed>
+      <v-list dense>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          v-bind:href="item.link"
+        >
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
   </v-container>
 </template>
 
@@ -86,12 +114,25 @@ export default {
     return {
       clipped: false,
       drawer: false,
+      items: [
+        {
+          title: "Instagram",
+          link: "https://www.instagram.com/tv/CGrH7K1jAt6/",
+          icon: "insta",
+        },
+        { title: "Gmail", link: "https://www.gmail.com", icon: "mail" },
+        {
+          title: "WhatsApp",
+          link: "https://api.whatsapp.com/send?phone=62082132229796&text=Selamat%20pagi%2C%20saya%20ingin%20bertanya%20sesuatu%20apakah%20bisa%3F",
+          icon: "wa",
+        },
+      ],
+
       scroll: true,
 
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "Yayasan Yohanes Gabriel Perwakilan 1",
       title2: "POSTING TERBARU",
     };
   },
