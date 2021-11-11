@@ -1,24 +1,22 @@
 <template>
   <div>
-    <section class="dash1 mt-2 d-flex white--text">
-        <h1 class="mx-auto my-auto text-center">
-          MEWUJUDKAN PENDIDIKAN KATOLIK YANG MEMBENTUK PRIBADI BERINTEGRITAS
-        </h1>
+    <section class="dash1 mt-2 d-flex white--text text-h2">
+      <h6 class="mx-auto my-auto text-center">
+        MEWUJUDKAN PENDIDIKAN KATOLIK YANG MEMBENTUK PRIBADI BERINTEGRITAS
+      </h6>
     </section>
 
     <section class="dash2">
-      
-        <center>
-          <img src="@/assets/images/children.jpg" height="100" width="150" />
-        </center>
+      <center>
+        <img src="@/assets/images/children.jpg" height="100" width="150" />
+      </center>
 
-        <center><h4>RD.Aloysius Hans Koerniawan</h4></center>
-        <center>
-          <p class="justify-center">
-            Ketua Yayasan Yohannes Gabriel Perwakilan 1 Surabaya
-          </p>
-        </center>
-     
+      <center><h4>RD.Aloysius Hans Koerniawan</h4></center>
+      <center>
+        <p class="justify-center">
+          Ketua Yayasan Yohannes Gabriel Perwakilan 1 Surabaya
+        </p>
+      </center>
 
       <v-col class="pa-md-2 mx-lg-auto mb-8">
         <center>
@@ -45,40 +43,30 @@
         </center>
       </v-col>
 
-      <v-col class="mt-2">
-        <center>
-          <h1 justify-center>JADWAL KEGIATAN SEMINGGU</h1>
-          <h2>SE-YAYASAN YOHANES GABRIEL</h2>
-        </center>
+      <v-col class="mt-2 text-h5 text-center">
+        <h1>JADWAL KEGIATAN SEMINGGU</h1>
+
+        <p>SE-YAYASAN YOHANES GABRIEL</p>
       </v-col>
 
-      <v-col>
-        <v-card class="pa-md-4 mx-lg-auto" color="rgb(255,250,250, 0.0)">
-          <v-card
-            ><center><h1>NOVEMBER</h1></center></v-card>
-          <v-flex>
-            <v-card>
-              <v-calendar :now="today" :value="today" color="primary">
-                <template v-slot:day="{ date }">
-                  <template v-for="event in eventsMap[date]">
-                    <v-menu :key="event.title" v-model="event.open">
-                      <template v-slot:activator="{ on }">
-                        <div
-                          v-if="!event.time"
-                          v-ripple
-                          class="my-event"
-                          v-on="on"
-                          v-html="event.title"
-                        ></div>
-                      </template>
-                    </v-menu>
-                  </template>
-                </template>
-              </v-calendar>
-            </v-card>
-          </v-flex>
-        </v-card>
-      </v-col>
+      <v-row>
+        <v-col>
+          <v-card class="pa-md-4 mx-lg-auto" color="rgb(255,250,250, 0.0)">
+            
+            <v-card-title class="justify-center text-h3 font-weight-bold">
+                2021
+             </v-card-title> 
+            <div class="d-flex justify-space-between mx-auto" >
+              <Card
+                class="d-flex mx-auto text-center"
+                v-for="(item, index) of events"
+                :key="index"
+                :item="item"
+              ></Card>
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
     </section>
 
     <section>
@@ -104,22 +92,12 @@
 
 
 <script>
+import Card from "@/components/Card.vue";
 export default {
   layout: "halaman",
+  components: { Card },
 
   data: () => ({
-    today: "2021-11-09",
-    events: [
-      {
-        title: "Orasi Pemilihan Ketua OSIS SMAK Untung Suropati Sidoarjo",
-        date: "2021-11-08",
-      },
-      {
-        title: "Hari Guru",
-        date: "2021-11-25",
-      },
-    ],
-
     items: [
       {
         src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
@@ -132,6 +110,44 @@ export default {
       },
       {
         src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+      },
+    ],
+
+    events: [
+      {
+        name: "Pemilihan Ketua OSIS",
+        description: "Dilaksanakan di SMAK Untung Suropati Sidoarjo",
+        date: "8 November",
+      },
+
+      {
+        name: "-",
+        description: "",
+        date: "9 November",
+      },
+
+      {
+        name: "Hari Pahlawan",
+        description: "Upacara dan Kegiatan Memperingati Hari Pahlawan ",
+        date: "10 November",
+      },
+
+      {
+        name: "Pertemuan Kepala Sekolah",
+        description: "Dilaksanakan Secara Online",
+        date: "11 November",
+      },
+
+      {
+        name: "Puncak Acara SDK St. MAry Surabaya",
+        description: "Lomba Fotografi dan Story Telling",
+        date: "12 November",
+      },
+
+      {
+        name: "-",
+        description: "",
+        date: "13 November",
       },
     ],
   }),
