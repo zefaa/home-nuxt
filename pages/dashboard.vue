@@ -6,81 +6,85 @@
       </h6>
     </section>
 
-    <section class="dash2 mb-5">
+    <section class="dash2 ma-auto pa-16">
+      
       <center>
         <img src="@/assets/images/children.jpg" height="100" width="150" />
       </center>
 
-      <center><h4>RD.Aloysius Hans Koerniawan</h4></center>
-      <center>
-        <p class="justify-center">
-          Ketua Yayasan Yohannes Gabriel Perwakilan 1 Surabaya
-        </p>
-      </center>
+      <p class="mx-auto my-auto text-center font-weight-bold">
+        RD.Aloysius Hans Koerniawan
+      </p>
 
-      <v-col class="pa-md-2 mx-lg-auto mb-8">
-        <center>
-          <p class="text-h20">
-            ” Selamat bergabung di website resmi kami, Yayasan Yohannes Gabriel
-            Perwakilan 1.
-          </p>
-          <p class="text-h10">
-            &nbsp; &nbsp; Yayasan Yohannes Gabriel Perwakilan 1 Surabaya adalah
-            yayasan pendidikan yang mengelola sekolah-sekolah Katolik di
-            Keuskupan Surabaya. Sejak berdiri tahun 1925, yayasan ini ada dan
-            terus memberikan yang terbaik untuk mencerdaskan kehidupan bangsa.
-            Kami terus mengembangkan diri sesuai dengan gerak jaman agar dapat
-            mendidik generasi penerus dan masa depan gereja dan masyarakat.
-            Nilai-nilai Katolik dan kebangsaan menjadi pedoman utama dalam
-            membina para siswa di sekolah-sekolah kami ini. Melalui media
-            website berserta seluruh jejaring sosial yayasan, kami juga berharap
-            agar sekolah-sekolah kami makin dikenal sebagai sekolah Katolik
-            milik Keuskupan Surabaya yang dapat diandalkan. Terlebih juga agar
-            para wali murid makin percaya dengan sekolah-sekolah kami dalam
-            mendidik dan membina anak-anak. Silahkan menghubungi kami untuk
-            segala informasi yang dibutuhkan.”
-          </p>
-        </center>
-      </v-col>
+      <p class="text-center">
+        Ketua Yayasan Yohannes Gabriel Perwakilan 1 Surabaya
+      </p>
 
-      <v-col class="mt-2 text-h4 text-center">
-        <h3>JADWAL KEGIATAN SEMINGGU</h3>
+      <p class="mx-auto my-auto justify">
+        &nbsp; &nbsp; ”Selamat bergabung di website resmi kami, Yayasan Yohannes Gabriel
+        Perwakilan 1.
+      </p>
+      <p class="mx-auto mb-auto pa-auto justify">
+        Yayasan Yohannes Gabriel Perwakilan 1 Surabaya adalah
+        yayasan pendidikan yang mengelola sekolah-sekolah Katolik di Keuskupan
+        Surabaya. Sejak berdiri tahun 1925, yayasan ini ada dan terus memberikan
+        yang terbaik untuk mencerdaskan kehidupan bangsa. Kami terus
+        mengembangkan diri sesuai dengan gerak jaman agar dapat mendidik
+        generasi penerus dan masa depan gereja dan masyarakat. Nilai-nilai
+        Katolik dan kebangsaan menjadi pedoman utama dalam membina para siswa di
+        sekolah-sekolah kami ini. Melalui media website berserta seluruh
+        jejaring sosial yayasan, kami juga berharap agar sekolah-sekolah kami
+        makin dikenal sebagai sekolah Katolik milik Keuskupan Surabaya yang
+        dapat diandalkan. Terlebih juga agar para wali murid makin percaya
+        dengan sekolah-sekolah kami dalam mendidik dan membina anak-anak.
+        Silahkan menghubungi kami untuk segala informasi yang dibutuhkan.”
+      </p>
 
-        <p>SE-YAYASAN YOHANES GABRIEL</p>
-      </v-col>
+      <h2
+        class="mx-auto mt-auto pt-16 text-center font-weight-bold"
+        width="100vw"
+      >
+        JADWAL KEGIATAN SEMINGGU
+      </h2>
+
+      <p class="mx-auto my-auto text-center font-weight-bold">
+        SE-YAYASAN YOHANES GABRIEL
+      </p>
 
       <!--Kalender-->
 
-      <v-card class="mx-lg-auto" color="rgb(255,250,250, 0.0)">
+      <v-card color="rgb(255,250,250, 0.0) pr-10">
         <v-card-title class="justify-center text-h4 font-weight-bold">
           2021
         </v-card-title>
+        <div
+          class=" mx-lg-auto d-flex align-content-space-around flex-wrap"
+        >
+          <Card
+            class="d-flex mx-auto text-center"
+            v-for="(item, index) of events"
+            :key="index"
+            :item="item"
+          ></Card>
+        </div>
       </v-card>
-
-      <div class="pa-md-2 mx-lg-auto d-flex align-content-space-around flex-wrap">
-        <Card
-          class="d-flex mx-auto text-center"
-          v-for="(item, index) of events"
-          :key="index"
-          :item="item"
-        ></Card>
-      </div>
     </section>
 
-    <section class="mt-15">
-      <v-col class="text-h4 text-center">
-          <h3>TESTIMONI YOHANNES GABRIEL PERWAKILAN 1</h3>
-          <p>SISWA, ORANGTUA, ALUMNI</p>
-      </v-col>
-      <v-col>
-        <v-carousel hide-delimiters>
-          <v-carousel-item
-            v-for="(item, i) in items"
-            :key="i"
-            :src="item.src"
-          ></v-carousel-item>
-        </v-carousel>
-      </v-col>
+    <section class="ma-auto pa-16">
+      <h2 class="mx-auto my-auto text-center font-weight-bold">
+        TESTIMONI YOHANNES GABRIEL PERWAKILAN 1
+      </h2>
+      <p class="mx-auto mb-5 text-center font-weight-bold">
+        SISWA, ORANGTUA, ALUMNI
+      </p>
+
+      <v-carousel class="px-auto mx-auto" cycle hide-delimiters show-arrows>
+        <v-carousel-item
+          v-for="(item, i) in items"
+          :key="i"
+          :src="item.src"
+        ></v-carousel-item>
+      </v-carousel>
     </section>
   </div>
 </template>
