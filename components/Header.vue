@@ -25,15 +25,15 @@
 
       <!--tampilan menu desktop-->
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn to="insta" text color="white">
+        <v-btn  text color="white" icon href="https://www.instagram.com/tv/CGrH7K1jAt6/">
           <v-icon>mdi-instagram</v-icon>
         </v-btn>
 
-        <v-btn to="mail" text color="white">
+        <v-btn  text color="white" icon href="https://www.gmail.com">
           <v-icon>mdi-gmail</v-icon>
         </v-btn>
 
-        <v-btn to="wa" text color="white">
+        <v-btn  text color="white" icon href="https://api.whatsapp.com/send?phone=62082132229796&text=Selamat%20pagi%2C%20saya%20ingin%20bertanya%20sesuatu%20apakah%20bisa%3F">
           <v-icon>mdi-whatsapp</v-icon>
         </v-btn>
 
@@ -118,13 +118,13 @@ export default {
         {
           title: "Instagram",
           link: "https://www.instagram.com/tv/CGrH7K1jAt6/",
-          icon: "insta",
+          
         },
-        { title: "Gmail", link: "https://www.gmail.com", icon: "mail" },
+        { title: "Gmail", link: "https://www.gmail.com",},
         {
           title: "WhatsApp",
           link: "https://api.whatsapp.com/send?phone=62082132229796&text=Selamat%20pagi%2C%20saya%20ingin%20bertanya%20sesuatu%20apakah%20bisa%3F",
-          icon: "wa",
+        
         },
       ],
 

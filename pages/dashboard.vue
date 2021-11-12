@@ -49,7 +49,7 @@
         <p>SE-YAYASAN YOHANES GABRIEL</p>
       </v-col>
 
-      <v-row>
+     <!-- <v-row>
         <v-col>
           <v-card class="pa-md-4 mx-lg-auto" color="rgb(255,250,250, 0.0)">
             
@@ -66,7 +66,7 @@
             </div>
           </v-card>
         </v-col>
-      </v-row>
+      </v-row> -->
     </section>
 
     <section>
