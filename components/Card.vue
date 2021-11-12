@@ -1,6 +1,6 @@
 <template>
   <v-card color="#bbc4c9" light class="d-flex flex-column justify-between mb-7" max-height="220" min-width="270"  max-width="270">
-    <v-card-title class="text-h5 justify-center"> {{item.date}} </v-card-title>
+    <v-card-title class="justify-center"> {{item.date}} </v-card-title>
 
     <v-card-subtitle class="text-h6"
       >{{item.name}}</v-card-subtitle

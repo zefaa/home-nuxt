@@ -6,7 +6,7 @@
       </h6>
     </section>
 
-    <section class="dash2">
+    <section class="dash2 mb-5">
       <center>
         <img src="@/assets/images/children.jpg" height="100" width="150" />
       </center>
@@ -43,38 +43,34 @@
         </center>
       </v-col>
 
-      <v-col class="mt-2 text-h5 text-center">
-        <h1>JADWAL KEGIATAN SEMINGGU</h1>
+      <v-col class="mt-2 text-h4 text-center">
+        <h3>JADWAL KEGIATAN SEMINGGU</h3>
 
         <p>SE-YAYASAN YOHANES GABRIEL</p>
       </v-col>
 
-     <!-- <v-row>
-        <v-col>
-          <v-card class="pa-md-4 mx-lg-auto" color="rgb(255,250,250, 0.0)">
-            
-            <v-card-title class="justify-center text-h3 font-weight-bold">
-                2021
-             </v-card-title> 
-            <div class="d-flex justify-space-between mx-auto" >
-              <Card
-                class="d-flex mx-auto text-center"
-                v-for="(item, index) of events"
-                :key="index"
-                :item="item"
-              ></Card>
-            </div>
-          </v-card>
-        </v-col>
-      </v-row> -->
+      <!--Kalender-->
+
+      <v-card class="mx-lg-auto" color="rgb(255,250,250, 0.0)">
+        <v-card-title class="justify-center text-h4 font-weight-bold">
+          2021
+        </v-card-title>
+      </v-card>
+
+      <div class="pa-md-2 mx-lg-auto d-flex align-content-space-around flex-wrap">
+        <Card
+          class="d-flex mx-auto text-center"
+          v-for="(item, index) of events"
+          :key="index"
+          :item="item"
+        ></Card>
+      </div>
     </section>
 
-    <section>
-      <v-col>
-        <center>
-          <h1 justify-center>TESTIMONI YOHANNES GABRIEL PERWAKILAN 1</h1>
-          <h2 justify-center><p class="text">SISWA, ORANGTUA, ALUMNI</p></h2>
-        </center>
+    <section class="mt-15">
+      <v-col class="text-h4 text-center">
+          <h3>TESTIMONI YOHANNES GABRIEL PERWAKILAN 1</h3>
+          <p>SISWA, ORANGTUA, ALUMNI</p>
       </v-col>
       <v-col>
         <v-carousel hide-delimiters>
