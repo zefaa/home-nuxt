@@ -57,13 +57,16 @@ export default {
 
     items: [
       {
-        name: "Logo Yayasan Yohanes Gabriel Perwakilan 1",
-        tags: [
-          {
-            icon: "mdi-view-logo.jpeg",
-            url: "https://codepen.io/jettaz",
-          },
-        ],
+        name: 'Logo Yayasan Yohanes Gabriel Perwakilan 1',
+        icon: 'mdi-view-map-marker-outline',
+        link: 'https://codepen.io/jettaz'
+
+        // tags: [
+        //   {
+        //     icon: "mdi-view-logo.jpeg",
+        //     url: "https://codepen.io/jettaz",
+        //   },
+        // ],
       },
 
       {
